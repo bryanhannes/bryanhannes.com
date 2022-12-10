@@ -1,0 +1,375 @@
+@import '_variables';
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+
+/**
+ * Basic styling
+ */
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+  font-family: $base-font-family;
+  color: $text-color;
+  position: relative;
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: calc($spacing-unit / 2);
+}
+
+
+/**
+ * `main` element
+ */
+main {
+  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+}
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $base-font-weight;
+}
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  @include relative-font-size(0.9375);
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: calc($spacing-unit / 2);
+    padding-left: calc($spacing-unit / 2);
+  }
+}
+
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/**
+ * Icons
+ */
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color};
+  padding-right: 5px;
+  vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.site-header {
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
+  min-height: $spacing-unit * 1.865;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+.site-header {
+  border: none;
+  border-bottom: 4px solid $brand-color;
+  background: #fff;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row
+  }
+
+  &__logo {
+
+    width: 70px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 800px) {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    a {
+      margin: 0 10px;
+      color: $dark-brand-color;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28.8px;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.footer {
+  &-wrapper {
+    background: #202126;
+  }
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  @media screen and (min-width: 800px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__socials {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: 800px) {
+      justify-content: flex-start;
+    }
+
+    li {
+      color: #fff;
+
+      span {
+        margin: 0 10px;
+      }
+    }
+
+    a {
+      margin: 0 10px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28.8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+
+      &:hover {
+        color: $brand-color;
+
+        svg {
+          fill: $brand-color;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+
+    @media screen and (min-width: 800px) {
+      flex-direction: row;
+      text-align: right;
+    }
+
+    li {
+      color: #fff;
+    }
+
+    a {
+      margin: 0 10px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28.8px;
+      text-decoration: none;
+
+      &:hover {
+        color: $brand-color;
+      }
+
+    }
+  }
+}
+
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1;
+}
