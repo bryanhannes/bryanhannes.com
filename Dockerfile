@@ -28,8 +28,10 @@ COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/server ./server
 COPY --from=build /usr/src/app/dist ./dist
 
-# Expose port 3000 (default port)
-EXPOSE 3000
+ENV PORT=8080
+
+# Expose port 8080 (default port)
+EXPOSE 8080
 
 # Start the application
 CMD [ "node", "server/entry.express"]
