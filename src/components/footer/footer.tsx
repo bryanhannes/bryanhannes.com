@@ -33,6 +33,13 @@ export default component$(() => {
                 </svg>
               </a>
             </li>
+            <li>
+              <a href="https://www.youtube.com/@bryanhannes" target="_blank">
+                <svg className="svg-icon">
+                  <use xlink:href="/assets/social-icons.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
           <ul class="footer__menu">
             <li>
