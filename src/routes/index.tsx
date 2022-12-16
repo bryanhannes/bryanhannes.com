@@ -60,6 +60,16 @@ export default component$(() => {
 
         <div class="articles__list">
           <a
+            href="https://blog.bryanhannes.com/why-you-should-externalize-angular-configuration/"
+            className="articles__article"
+          >
+            <img
+              src="/assets/images/externalize-configuration-angular-cover.png"
+              alt="Externalize Angular configuration"
+            />
+            <h3>Why you should externalize your Angular Configuration</h3>
+          </a>
+          <a
             href="https://blog.bryanhannes.com/tutorial-run-qwik-in-docker/"
             class="articles__article"
           >
