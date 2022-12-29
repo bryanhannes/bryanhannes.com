@@ -60,6 +60,27 @@ export default component$(() => {
 
         <div class="articles__list">
           <a
+            href="https://blog.bryanhannes.com/lets-build-image-generator-with-openai-and-angular/"
+            className="articles__article"
+          >
+            <img
+              src="/assets/images/building-image-generator-with-openai-and-angular.png"
+              alt="Let's build an Image Generator with OpenAI and Angular"
+            />
+            <h3>Let's build an Image Generator with OpenAI and Angular</h3>
+          </a>
+          <a
+            href="https://blog.bryanhannes.com/building-qwik-with-buildpack/"
+            class="articles__article"
+          >
+            <img
+              src="/assets/images/running-qwik-in-docker-without-dockerfile-buildpack.png"
+              alt="Running Qwik in Docker without Dockerfile (Buildpacks)
+"
+            />
+            <h3>Running Qwik in Docker without Dockerfile (Buildpacks)</h3>
+          </a>
+          <a
             href="https://blog.bryanhannes.com/why-you-should-externalize-angular-configuration/"
             className="articles__article"
           >
