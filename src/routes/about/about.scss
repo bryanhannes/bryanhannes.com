@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.introduction {
+  margin: 2rem auto 4rem;
+}
+
+.blurb {
+  background-color: $background-color-light;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .skill-logo {
+    max-height: 120px;
+    max-width: 120px;
+    filter: opacity(0.7);
+    transition: 0.3s ease-out;
+
+    &:hover {
+      filter: opacity(1);
+    }
+  }
+}

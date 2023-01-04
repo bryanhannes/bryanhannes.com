@@ -5,9 +5,13 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, figure,
+div, main, section,
+header, footer,
+body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 // Use media queries like this:
@@ -49,7 +53,6 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -116,32 +119,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+h2 {
+  font-weight: 500;
+}
 
 /**
  * Links
  */
 a {
   color: $brand-color;
-  text-decoration: none;
+  transition: 0.2s ease-out;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 10%);
   }
 
   &:hover {
-    color: $text-color;
+    color: darken($brand-color, 25%);
     text-decoration: underline;
   }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
-  }
 }
-
 
 /**
  * Code formatting
@@ -173,7 +170,7 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: 940px;
+  max-width: 1040px;
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -212,37 +209,82 @@ pre {
   vertical-align: text-top;
 }
 
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
-}
-
 .container {
-  max-width: 1260px;
+  max-width: 1040px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-.site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1;
 }
 
+.introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem auto 5rem;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .hello {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .profile-picture {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+}
+
+.line {
+  width: 80px;
+  border: 2px solid $brand-color;
+  margin-bottom: 2rem;
+}
+
+// Header
+
 .site-header {
-  border: none;
-  border-bottom: 4px solid $brand-color;
-  background: #fff;
+  min-height: $spacing-unit * 1.865;
+  // Positioning context for the mobile navigation icon
+  position: relative;
+  background-color: transparent;
+
+  .container {
+    background-color: $background-color-light;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -252,159 +294,50 @@ pre {
     flex-direction: row
   }
 
-  &__logo {
+  & .header {
+    &__logo {
+      width: 70px;
+      margin-bottom: 20px;
 
-    width: 70px;
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 800px) {
-      margin-bottom: 0;
-    }
-
-  }
-
-  &__menu {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-
-    a {
-      margin: 0 10px;
-      color: $dark-brand-color;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28.8px;
-      text-decoration: none;
-    }
-  }
-}
-
-
-.footer {
-  &-wrapper {
-    background: #202126;
-  }
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-
-  @media screen and (min-width: 800px) {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  &__socials {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
-    @media screen and (min-width: 800px) {
-      justify-content: flex-start;
-    }
-
-    li {
-      color: #fff;
-
-      span {
-        margin: 0 10px;
+      @media screen and (min-width: 800px) {
+        margin-bottom: 0;
       }
     }
 
-    a {
-      margin: 0 10px;
-      color: #fff;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28.8px;
-      text-decoration: none;
+    &__menu {
+      list-style-type: none;
       display: flex;
-      align-items: center;
+      margin: 0;
+      padding: 0;
 
+      li.header__menu__item {
+        a {
+          margin: 0 10px;
+          color: $dark-brand-color;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28.8px;
+          text-decoration: none;
+          transition: 0.2s ease-out;
 
-      &:hover {
-        color: $brand-color;
-
-        svg {
-          fill: $brand-color;
+          &:hover {
+            color: $brand-color;
+          }
         }
       }
     }
   }
 
-  &__menu {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    text-align: center;
+  &__socials {
+    display: none;
 
-    @media screen and (min-width: 800px) {
-      flex-direction: row;
-      text-align: right;
+    svg {
+      fill: $dark-brand-color
     }
 
-    li {
-      color: #fff;
-    }
-
-    a {
-      margin: 0 10px;
-      color: #fff;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28.8px;
-      text-decoration: none;
-
-      &:hover {
-        color: $brand-color;
-      }
-
+    @media screen and (min-width: 768px) {
+      display: block;
     }
   }
 }
 
-.page-content {
-  padding: $spacing-unit 0;
-  flex: 1;
-}
-
-.introduction {
-  margin-bottom: $spacing-unit;
-}
-
-.latest-articles {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  .articles {
-
-    &__list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      gap: 1rem;
-
-      @media screen and (max-width: 450px) {
-        grid-template-columns: initial;
-      }
-
-    }
-
-    &__article {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem
-    }
-  }
-}
