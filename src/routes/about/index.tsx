@@ -10,7 +10,7 @@ export default component$(() => {
       <section class="introduction">
         <div class="column">
           <h1 class="hello">About me </h1>
-          <hr className="line" />
+          <hr class="line" />
           <p>
             I'm Bryan Hannes. I'm a frontend software engineer for DHL Aviation.
             I'm also a{" "}
@@ -100,14 +100,14 @@ export default component$(() => {
           <img
             src="/assets/images/logos/affinity.svg"
             alt="Affinity Designer"
-            className="skill-logo"
+            class="skill-logo"
           />
         </div>
       </section>
 
       <section class="blurb">
         <h2>Fun facts</h2>
-        <hr className="line" />
+        <hr class="line" />
         <ul>
           <li>️As an 11 year old kid, I wanted to become a web developer</li>
           <li>I coded my first website when I was 13 years old</li>

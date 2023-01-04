@@ -55,14 +55,14 @@ export default component$(() => {
         </div>
         {/*<p>Fun facts about me:</p>*/}
       </section>
-      <section className="latest-articles">
+      <section class="latest-articles">
         <h2>Latest blog articles</h2>
-        <hr className="line" />
+        <hr class="line" />
 
-        <div className="articles__list">
+        <div class="articles__list">
           <a
             href="https://blog.bryanhannes.com/lets-build-image-generator-with-openai-and-angular/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="/assets/images/building-image-generator-with-openai-and-angular.png"
@@ -72,7 +72,7 @@ export default component$(() => {
           </a>
           <a
             href="https://blog.bryanhannes.com/building-qwik-with-buildpack/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="/assets/images/running-qwik-in-docker-without-dockerfile-buildpack.png"
@@ -83,7 +83,7 @@ export default component$(() => {
           </a>
           <a
             href="https://blog.bryanhannes.com/why-you-should-externalize-angular-configuration/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="/assets/images/externalize-configuration-angular-cover.png"
@@ -93,7 +93,7 @@ export default component$(() => {
           </a>
           <a
             href="https://blog.bryanhannes.com/tutorial-run-qwik-in-docker/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="/assets/images/running-qwik-in-docker-cover.png"
