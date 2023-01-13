@@ -61,11 +61,31 @@ export default component$(() => {
 
         <div class="articles__list">
           <a
+            href="https://blog.bryanhannes.com/typesafe-view-models-with-rxjs-and-angular/"
+            className="articles__article"
+          >
+            <img
+              src="https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular.png"
+              alt="Typesafe view models with RxJS and Angular"
+            />
+            <h3>Typesafe view models with RxJS and Angular</h3>
+          </a>
+          <a
+            href="https://blog.bryanhannes.com/reactively-storing-and-retrieving-url-state-in-angular/"
+            className="articles__article"
+          >
+            <img
+              src="https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular.png"
+              alt="Reactively storing and retrieving URL state in Angular"
+            />
+            <h3>Reactively storing and retrieving URL state in Angular</h3>
+          </a>
+          <a
             href="https://blog.bryanhannes.com/lets-build-image-generator-with-openai-and-angular/"
             class="articles__article"
           >
             <img
-              src="/assets/images/building-image-generator-with-openai-and-angular.png"
+              src="https://blog.bryanhannes.com/assets/building-image-generator-with-openai-and-angular/building-image-generator-with-openai-and-angular.png"
               alt="Let's build an Image Generator with OpenAI and Angular"
             />
             <h3>Let's build an Image Generator with OpenAI and Angular</h3>
@@ -75,7 +95,7 @@ export default component$(() => {
             class="articles__article"
           >
             <img
-              src="/assets/images/running-qwik-in-docker-without-dockerfile-buildpack.png"
+              src="https://blog.bryanhannes.com/assets/running-qwik-in-docker-without-dockerfile-buildpack/running-qwik-in-docker-without-dockerfile-buildpack.png"
               alt="Running Qwik in Docker without Dockerfile (Buildpacks)
 "
             />
@@ -86,7 +106,7 @@ export default component$(() => {
             class="articles__article"
           >
             <img
-              src="/assets/images/externalize-configuration-angular-cover.png"
+              src="https://blog.bryanhannes.com/assets/externalize-angular-configuration/externalize-configuration-angular-cover.png"
               alt="Externalize Angular configuration"
             />
             <h3>Why you should externalize your Angular Configuration</h3>
@@ -96,7 +116,7 @@ export default component$(() => {
             class="articles__article"
           >
             <img
-              src="/assets/images/running-qwik-in-docker-cover.png"
+              src="https://blog.bryanhannes.com/assets/running-qwik-in-docker/running-qwik-in-docker-cover.png"
               alt="Tutorial: Running Qwik in a Docker container"
             />
             <h3>Tutorial: Running Qwik in a Docker container</h3>
