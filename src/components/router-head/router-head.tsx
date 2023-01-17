@@ -46,6 +46,8 @@ export const RouterHead = component$(() => {
       {head.styles.map((s) => (
         <style {...s.props} dangerouslySetInnerHTML={s.style} />
       ))}
+
+      <script src="https://www.googletagmanager.com/gtag/js?id=G-M1S4NQB70S" async></script>
     </>
   );
 });

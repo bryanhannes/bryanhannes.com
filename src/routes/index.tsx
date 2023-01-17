@@ -62,7 +62,7 @@ export default component$(() => {
         <div class="articles__list">
           <a
             href="https://blog.bryanhannes.com/typesafe-view-models-with-rxjs-and-angular/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular.png"
@@ -72,7 +72,7 @@ export default component$(() => {
           </a>
           <a
             href="https://blog.bryanhannes.com/reactively-storing-and-retrieving-url-state-in-angular/"
-            className="articles__article"
+            class="articles__article"
           >
             <img
               src="https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular.png"
