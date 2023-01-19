@@ -21,6 +21,9 @@ export default component$(() => {
             <li class="header__menu__item">
               <Link href="/about"> About </Link>
             </li>
+            <li className="header__menu__item">
+              <Link href="/projects"> Projects </Link>
+            </li>
             <li class="header__menu__item">
               <Link href="https://blog.bryanhannes.com"> Blog </Link>
             </li>
