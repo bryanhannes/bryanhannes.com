@@ -7,8 +7,8 @@ export default component$(() => {
   return (
     <>
       <Header />
-      <main class="page-content">
-        <div class="wrapper">
+      <main class="bg-beige-200">
+        <div class="container m-auto">
           <Slot />
         </div>
       </main>

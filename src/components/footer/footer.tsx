@@ -1,24 +1,19 @@
-import { component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
-import styles from "./footer.scss?inline";
+import { component$, useStore } from "@builder.io/qwik";
 import Socials from "~/components/socials/socials";
 
 export default component$(() => {
-  useStylesScoped$(styles);
-
   const state = useStore({
     year: new Date().getFullYear(),
   });
 
   return (
-    <footer class="footer-wrapper">
-      <div class="container">
-        <div class="footer">
+    <footer class="bg-brown">
+      <div class="container mx-auto">
+        <div class="flex justify-between py-5 gap-1">
           <Socials />
-          <ul class="footer__menu">
-            <li>
-              <span>&copy; Bryan Hannes | 2022 - {state.year}</span>
-            </li>
-          </ul>
+          <div class="text-white">
+            &copy; bryanhannes.com | 2022 - {state.year}
+          </div>
         </div>
       </div>
     </footer>
