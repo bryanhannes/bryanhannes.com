@@ -42,12 +42,12 @@ export default component$(() => {
               cookieConsentRejected();
               state.showCookiebanner = false;
             }}
-            class="text-orange-600 focus:outline-none hover:underline hover:text-orange-700"
+            class="text-orange focus:outline-none hover:underline hover:text-orange"
           >
             Reject
           </button>
           <button
-            class="bg-orange-600 px-5 py-2 text-white rounded-md hover:bg-orange-700 focus:outline-none"
+            class="bg-orange px-5 py-2 text-white rounded-md hover:bg-orange focus:outline-none"
             onClick$={() => {
               cookieConsentGranted();
               state.showCookiebanner = false;
