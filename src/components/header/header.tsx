@@ -1,11 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import Socials from "~/components/socials/socials";
 
 export default component$(() => {
   return (
     <header class="bg-white">
-      <div class="container flex justify-between items-center m-auto">
+      <div class="container flex  flex-col sm:flex-row justify-between items-center m-auto">
         <Link href="/">
           <img
             class="w-20 my-3"
@@ -13,7 +12,7 @@ export default component$(() => {
             alt="Bryan Hannes logo"
           />
         </Link>
-        <ul class="sm: flex gap-3 align m-0 display-none ">
+        <ul class="flex gap-8 align m-0 display-none pb-4 sm:pb-0">
           <li>
             <Link
               href="/"
@@ -29,16 +28,7 @@ export default component$(() => {
               class="duration-200 transition-all no-underline text-black hover:text-orange"
             >
               {" "}
-              About{" "}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/projects"
-              class="duration-200 transition-all no-underline text-black hover:text-orange"
-            >
-              {" "}
-              Projects{" "}
+              About me{" "}
             </Link>
           </li>
           <li>
@@ -51,8 +41,6 @@ export default component$(() => {
             </Link>
           </li>
         </ul>
-
-        <Socials />
       </div>
     </header>
   );

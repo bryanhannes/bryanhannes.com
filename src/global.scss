@@ -225,7 +225,7 @@ pre {
   width: 16px;
   height: 16px;
   display: inline-block;
-  fill: #{$grey-color};
+  fill: #{$grey-color-light};
   padding-right: 5px;
   vertical-align: text-top;
   box-sizing: content-box;
@@ -267,4 +267,36 @@ pre {
   &:hover {
     box-shadow: 0 2px 0 #f04c26, -0.1875rem -0.1875rem 0 0.1875rem #ffcd00, 0 0 0 0.375rem #f04c26;
   }
+}
+
+.waving-hand {
+  animation: waving-hand 0.8s ease-in-out infinite;
+  animation-play-state: paused;
+
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes waving-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.skill-logo {
+  max-height: 100px;
+  filter: opacity(0.7);
+  transition: 0.3s ease-out;
+
+  &:hover {
+    filter: opacity(1);
+  }
+
 }

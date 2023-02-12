@@ -11,8 +11,8 @@ export default component$(() => {
       <div class="container mx-auto">
         <div class="flex justify-between py-5 gap-1">
           <Socials />
-          <div class="text-white">
-            &copy; bryanhannes.com | 2022 - {state.year}
+          <div class="text-white font-medium">
+            &copy; 2022 - {state.year} Bryan Hannes
           </div>
         </div>
       </div>

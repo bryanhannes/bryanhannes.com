@@ -7,13 +7,6 @@ export default component$(() => {
   return (
     <ul class="socials">
       <li>
-        <a href="https://github.com/bryanhannes" target="_blank">
-          <svg class="svg-icon">
-            <use xlink:href="/assets/social-icons.svg#github"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
         <a href="https://www.twitter.com/BryanHannes" target="_blank">
           <svg class="svg-icon">
             <use xlink:href="/assets/social-icons.svg#twitter"></use>
@@ -31,6 +24,13 @@ export default component$(() => {
         <a href="https://www.youtube.com/@bryanhannes" target="_blank">
           <svg class="svg-icon">
             <use xlink:href="/assets/social-icons.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/bryanhannes" target="_blank">
+          <svg class="svg-icon">
+            <use xlink:href="/assets/social-icons.svg#github"></use>
           </svg>
         </a>
       </li>
