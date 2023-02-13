@@ -34,25 +34,25 @@ export default component$(() => {
       </section>
 
       {/* TODO Create a few lines of text here*/}
-      {/*// <section class="py-8">*/}
-      {/*  <div class="container m-auto my-10 px-4 md:px-0 ">*/}
-      {/*    <h2 class={`text-2xl mb-2`}>Technical Skills</h2>*/}
-      {/*    <hr class="mb-4 w-20 border-orange border-2 border-solid" />*/}
-      {/*    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">*/}
-      {/*      /!*  TODO add some technicall skills here, in a slideshow? *!/*/}
+      <section class="py-8">
+        <div class="container m-auto my-10 px-4 md:px-0 ">
+          <h2 class={`text-2xl mb-2`}>Technical Skills</h2>
+          <hr class="mb-4 w-20 border-orange border-2 border-solid" />
+          <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
+            {/*  TODO add some technicall skills here, in a slideshow? */}
 
-      {/*      <p>Over the years I've build a lot of web applications</p>*/}
+            <p>Over the years I've build a lot of web applications</p>
 
-      {/*//       <p>*/}
-      {/*        I'm an advocate on working on side projects for educational*/}
-      {/*        purposes, because I believe this strenghten your skillset in other*/}
-      {/*        ways.*/}
-      {/*      </p>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
+            <p>
+              I'm an advocate on working on side projects for educational
+              purposes, because I believe this strenghten your skillset in other
+              ways.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <section className="py-8">
+      <section className="bg-gray-100 py-8">
         <div className="container m-auto my-10 px-4 md:px-0 ">
           <h2 className={`text-2xl mb-2`}>My toolbelt</h2>
           <hr className="mb-4 w-20 border-orange border-2 border-solid" />
@@ -87,7 +87,7 @@ export default component$(() => {
         </div>
       </section>
 
-      <section class="bg-gray-100 py-8">
+      <section class="bg-brown py-8 text-white">
         <div class="container m-auto my-10 px-4 md:px-0 ">
           <h2 class={`text-2xl mb-2`}>Side projects</h2>
           <hr class="mb-4 w-20 border-orange border-2 border-solid" />
