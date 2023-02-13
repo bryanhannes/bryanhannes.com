@@ -8,54 +8,78 @@ export default component$(() => {
   return (
     <>
       <section class="bg-brown text-white">
-        <div class="container m-auto flex flex-col md:flex-row items-center gap-8 py-16">
+        <div class="container m-auto flex flex-col md:flex-row items-center justify-center gap-8 py-16">
           <div class="flex flex-col container gap-2 px-4 md:px-0">
             <h1 class={"text-3xl mb-2"}>About me</h1>
             <hr class="mb-4 w-20 border-orange border-2 border-solid" />
+
             <p class={`leading-relaxed text-4xl`}>
               I'm a <span class="text-orange">frontend software engineer.</span>
             </p>
-            <p class={`text-2xl mb-4`}>
+
+            <p class={`text-2xl mb-8`}>
               <span class="text-orange">Angular and Typescript</span> are my
               daily work horse, but I like exploring other technologies as well.
             </p>
 
-            <p>
-              I like working on the visible side of things, that's why my main
-              focus is on the frontend. But that doesn't mean I don't like
-              exploring things like NodeJS and Docker.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-8">
+              <div className="flex flex-col">
+                <p className={`mb-4`}>
+                  I am a software engineer with extensive experience in building
+                  high-quality applications. My journey in the field began as a
+                  Java developer, but I soon discovered my passion for the
+                  visual aspects of applications. This led me to explore
+                  frontend development, and I fell in love with{" "}
+                  <span class={`text-orange`}>Angular</span>.
+                </p>
+
+                <p className={`mb-4`}>
+                  Throughout my career, I have had the opportunity to work with
+                  a diverse range of technologies. From setting up design
+                  systems in Figma, to creating Dockerfiles, to building NodeJS
+                  applications.
+                </p>
+              </div>
+              <div className="flex flex-col">
+                <p className={`mb-4`}>
+                  Even though, I have worked with a wide variety of
+                  technologies, my main{" "}
+                  <span className={`text-orange`}>focus</span> still lies in{" "}
+                  <span className={`text-orange`}>frontend development</span>.
+                </p>
+
+                <p className={`mb-4`}>
+                  In addition to my professional experience, I have also
+                  undertaken numerous{" "}
+                  <span className={`text-orange`}>side projects</span> that have
+                  helped me continually improve and refine my skills. I firmly
+                  believe that these projects have been invaluable in my{" "}
+                  <span className={`text-orange`}>
+                    growth as a software engineer
+                  </span>
+                  .
+                </p>
+              </div>
+            </div>
 
             <div class="flex flex-row justify-end mt-4">
               <Socials />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* TODO Create a few lines of text here*/}
-      <section class="py-8">
-        <div class="container m-auto my-10 px-4 md:px-0 ">
-          <h2 class={`text-2xl mb-2`}>Technical Skills</h2>
-          <hr class="mb-4 w-20 border-orange border-2 border-solid" />
-          <div class="grid gap-8 grid-cols-1 sm:grid-cols-2">
-            {/*  TODO add some technicall skills here, in a slideshow? */}
-
-            <p>Over the years I've build a lot of web applications</p>
-
-            <p>
-              I'm an advocate on working on side projects for educational
-              purposes, because I believe this strenghten your skillset in other
-              ways.
-            </p>
+          <div className="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full">
+            <img
+              src="/assets/bryan-hannes.jpg"
+              alt="Bryan Hannes"
+              className="rounded-full mx-auto p-1 max-w-[300px]"
+            />
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-100 py-8">
+      <section className="bg-white py-8">
         <div className="container m-auto my-10 px-4 md:px-0 ">
-          <h2 className={`text-2xl mb-2`}>My toolbelt</h2>
-          <hr className="mb-4 w-20 border-orange border-2 border-solid" />
+          <h2 className={`text-2xl mb-3 text-center`}>My toolbelt</h2>
+          <hr className="mb-8 w-20 border-orange border-2 border-solid text-center mx-auto" />
           <div className={`flex flex-row flex-wrap justify-center gap-16 mt-4`}>
             <img
               src="/assets/images/logos/angular.svg"
@@ -87,21 +111,21 @@ export default component$(() => {
         </div>
       </section>
 
-      <section class="bg-brown py-8 text-white">
+      <section class="bg-gray-100 py-8">
         <div class="container m-auto my-10 px-4 md:px-0 ">
           <h2 class={`text-2xl mb-2`}>Side projects</h2>
           <hr class="mb-4 w-20 border-orange border-2 border-solid" />
-          <p class={`mb-4`}>
-            To keep things interesting and experiment with new tech I like to
-            work on side projects, here you can find some of the most relevant
-            side projects.
+          <p class={`mb-8`}>
+            To maintain excitement and explore new technology, I enjoy
+            undertaking side projects. Here, I have listed some of my most
+            noteworthy side projects.
           </p>
           <div class={`grid gap-8 grid-cols-1 sm:grid-cols-2`}>
             <Card
               title={`Frituurvleesje kiezen`}
               description={`Frituurvleesje kiezen is a website that helps you choose a frituurvleesje. It is a fun project that I build with Qwik.`}
               url={`https://frituurvleesjekiezen.be`}
-              imagePath={`/assets/images/projects/frituurvleesje-kiezen.jpg`}
+              imagePath={`/assets/images/projects/frituurvleesjekiezen-mockup.jpg`}
               buttonText={`Check it out`}
               target={"_blank"}
             />
@@ -133,7 +157,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "Bryan is a front-end engineer and AI enthusiast. He is passionate about Angular, RxJS, and Qwik, and enjoys sharing his knowledge and experiences through blog posts and YouTube videos. When he's not working, Bryan can be found cooking or working on exciting side projects.",
+        "Bryan is a frontend engineer and AI enthusiast. He is passionate about Angular, RxJS, and Qwik, and enjoys sharing his knowledge and experiences through blog posts and YouTube videos. When he's not working, Bryan can be found cooking or working on exciting side projects.",
     },
   ],
 };
