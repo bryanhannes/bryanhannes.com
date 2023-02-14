@@ -69,9 +69,9 @@ export default component$(() => {
               q:slot={`image`}
               alt={`The ChatGPT lookalike build with Qwik and OpenAI`}
               sizes={`100vw`}
-              imgSrc={`https://blog.bryanhannes.com/assets/the-chat-gpt-lookalike-build-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.jpg`}
-              webpSrcSet={`https://blog.bryanhannes.com/assets/the-chat-gpt-lookalike-build-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.webp 500w, https://blog.bryanhannes.com/assets/the-chat-gpt-lookalike-build-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.webp 1000w`}
-              avifSrcSet={`https://blog.bryanhannes.com/assets/the-chat-gpt-lookalike-build-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.avif 500w, https://blog.bryanhannes.com/assets/the-chat-gpt-lookalike-build-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.avif 1000w`}
+              imgSrc={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.jpg`}
+              webpSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.webp 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.webp 1000w`}
+              avifSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.avif 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.avif 1000w`}
             />
           </Card>
 
