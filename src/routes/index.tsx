@@ -72,6 +72,7 @@ export default component$(() => {
               imgSrc={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.jpg`}
               webpSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.webp 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.webp 1000w`}
               avifSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.avif 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.avif 1000w`}
+              cssClass={`rounded-t-xl`}
             />
           </Card>
 
@@ -88,6 +89,7 @@ export default component$(() => {
               imgSrc={`https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular@500.jpg`}
               webpSrcSet={`https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular@500.webp 500w, https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular@1000.webp 1000w`}
               avifSrcSet={`https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular@500.avif 500w, https://blog.bryanhannes.com/assets/reactively-storing-and-retrieving-url-state-in-angular/reactively-storing-and-retrieving-url-state-in-angular@1000.avif 1000w`}
+              cssClass={`rounded-t-xl`}
             />
           </Card>
 
@@ -104,6 +106,7 @@ export default component$(() => {
               imgSrc={`https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/qwikchat-chat-gpt-with-qwik-and-openai@500.jpg`}
               webpSrcSet={`https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular@500.webp 500w, https://blog.bryanhannes.com/assets/ctypesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular@1000.webp 1000w`}
               avifSrcSet={`https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular@500.avif 500w, https://blog.bryanhannes.com/assets/typesafe-view-models-with-rxjs-and-angular/typesafe-view-models-with-rxjs-and-angular@1000.avif 1000w`}
+              cssClass={`rounded-t-xl`}
             />
           </Card>
         </div>
