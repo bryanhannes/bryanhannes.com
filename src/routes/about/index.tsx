@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Socials from "~/components/socials/socials";
 import { Card } from "~/components/card";
 import { QwikLogo } from "~/components/icons/qwik";
+import { Image } from "~/components/image";
 
 export default component$(() => {
   return (
@@ -66,11 +67,15 @@ export default component$(() => {
               <Socials />
             </div>
           </div>
-          <div className="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full">
-            <img
-              src="/assets/bryan-hannes.jpg"
-              alt="Bryan Hannes"
-              className="rounded-full mx-auto p-1 max-w-[300px]"
+
+          <div className="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full max-w-[300px] mx-auto p-1">
+            <Image
+              alt={`Profile picture of Bryan Hannes`}
+              sizes={`100vw`}
+              imgSrc={`/assets/images/profile-pics/bryan-hannes400.jpg`}
+              webpSrcSet={`/assets/images/profile-pics/bryan-hannes@300.webp 300w, /assets/images/profile-pics/bryan-hannes@600.webp 600w`}
+              avifSrcSet={`/assets/images/profile-pics/bryan-hannes@300.avif 300w, /assets/images/profile-pics/bryan-hannes@600.avif 600w`}
+              cssClass={`rounded-full `}
             />
           </div>
         </div>
@@ -125,10 +130,19 @@ export default component$(() => {
               title={`Frituurvleesje kiezen`}
               description={`Frituurvleesje kiezen is a website that helps you choose a frituurvleesje. It is a fun project that I build with Qwik.`}
               url={`https://frituurvleesjekiezen.be`}
-              imagePath={`/assets/images/projects/frituurvleesjekiezen-mockup.jpg`}
               buttonText={`Check it out`}
               target={"_blank"}
-            />
+            >
+              <Image
+                q:slot={`image`}
+                alt={`Profile picture of Bryan Hannes`}
+                sizes={`(max-width: 400px) 400w, 720w`}
+                imgSrc={`/assets/images/projects/frituurvleesjekiezen@400.jpg`}
+                imgSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.jpg 400w, /assets/images/projects/frituurvleesjekiezen@720.jpg 720w`}
+                webpSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.webp 400w, /assets/images/projects/frituurvleesjekiezen@720.webp 720w`}
+                avifSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.avif 400w, /assets/images/projects/frituurvleesjekiezen@720.avif 720w`}
+              />
+            </Card>
           </div>
         </div>
       </section>

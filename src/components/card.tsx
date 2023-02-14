@@ -1,10 +1,10 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, Slot } from "@builder.io/qwik";
 
 export interface CardProps {
   title: string;
   description?: string;
   url: string;
-  imagePath: string;
+  imagePath?: string;
   buttonText?: string;
   target?: string;
 }
@@ -25,7 +25,16 @@ export const Card = component$(
           class={`text-decoration text-brown bg-white`}
           target={target}
         >
-          <img src={imagePath} alt={title} class="rounded-t-xl" />
+          {imagePath ? (
+            <img
+              src={imagePath}
+              alt={title}
+              className="rounded-t-xl"
+              loading="lazy"
+            />
+          ) : (
+            <Slot name="image" />
+          )}
           <div class={`p-4`}>
             <h3 class="text-1xl font-semibold break-words mb-2">{title}</h3>
             {description && description?.length > 0 ? (
