@@ -8,16 +8,16 @@ export default component$(() => {
   return (
     <>
       <section class="bg-brown text-white">
-        <div class="container m-auto flex flex-col md:flex-row items-center justify-center gap-8 py-16">
-          <div class="flex flex-col container gap-2 px-4 md:px-0">
+        <div class="container m-auto flex flex-col-reverse xl:flex-row items-center justify-center gap-8 py-16">
+          <div class="flex flex-col gap-2">
             <h1 class={"text-3xl mb-2"}>About me</h1>
             <hr class="mb-4 w-20 border-orange border-2 border-solid" />
 
-            <p class={`leading-relaxed text-4xl`}>
+            <p class={`leading-relaxed text-2xl sm:text-3xl mb-4`}>
               I'm a <span class="text-orange">frontend software engineer.</span>
             </p>
 
-            <p class={`text-2xl mb-8`}>
+            <p class={`text-1xl sm:text-2xl mb-8`}>
               <span class="text-orange">Angular and Typescript</span> are my
               daily work horse, but I like exploring other technologies as well.
             </p>
@@ -77,7 +77,7 @@ export default component$(() => {
       </section>
 
       <section className="bg-white py-8">
-        <div className="container m-auto my-10 px-4 md:px-0 ">
+        <div className="container m-auto my-10">
           <h2 className={`text-2xl mb-3 text-center`}>My toolbelt</h2>
           <hr className="mb-8 w-20 border-orange border-2 border-solid text-center mx-auto" />
           <div className={`flex flex-row flex-wrap justify-center gap-16 mt-4`}>
@@ -112,7 +112,7 @@ export default component$(() => {
       </section>
 
       <section class="bg-gray-100 py-8">
-        <div class="container m-auto my-10 px-4 md:px-0 ">
+        <div class="container m-auto my-10">
           <h2 class={`text-2xl mb-2`}>Side projects</h2>
           <hr class="mb-4 w-20 border-orange border-2 border-solid" />
           <p class={`mb-8`}>
@@ -134,7 +134,7 @@ export default component$(() => {
       </section>
 
       <section class="py-8">
-        <div class="container m-auto my-10 px-4 md:px-0 ">
+        <div class="container m-auto my-10">
           <h2 class={`text-2xl mb-2`}>Fun Facts</h2>
           <hr class="mb-4 w-20 border-orange border-2 border-solid" />
           <ul class={`ml-0`}>

@@ -16,10 +16,14 @@ export default component$(() => {
             />
           </div>
 
-          <div class="flex flex-col container gap-2 md:px-0 max-w-xl">
-            <div class="flex flex-row gap-4 text-5xl font-bold mb-2">
-              <span class={`waving-hand`}>👋</span>
-              <h1> Hi, I'm Bryan Hannes</h1>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 mb-2 text-center sm:text-left">
+              <span class={`waving-hand text-4xl md:text-5xl lg:text-6xl`}>
+                👋
+              </span>
+              <h1 class={`text-3xl md:text-4xl lg:text-5xl`}>
+                Hi, I'm Bryan Hannes
+              </h1>
             </div>
             <p class={`leading-relaxed text-lg`}>
               I'm a <span class="text-orange">frontend software engineer </span>{" "}
@@ -45,7 +49,7 @@ export default component$(() => {
         </div>
       </section>
 
-      <section class="container m-auto my-10 px-4 md:px-0">
+      <section class="container m-auto my-10">
         <h2 class="text-2xl mb-3">Latest blog articles</h2>
         <hr class="mb-10 w-20 border-orange border-2 border-solid" />
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
