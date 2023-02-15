@@ -30,10 +30,10 @@ export default component$(() => {
           <button
             id="hamburger-button"
             type="button"
-            className="-my-1 flex h-8 w-8 items-center justify-center lg:hidden"
+            class="-my-1 flex h-8 w-8 items-center justify-center lg:hidden"
           >
-            <span className="sr-only">Open navigation</span>
-            <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-black">
+            <span class="sr-only">Open navigation</span>
+            <svg viewBox="0 0 24 24" class="h-6 w-6 stroke-black">
               <path
                 d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5"
                 fill="none"
@@ -44,7 +44,7 @@ export default component$(() => {
           </button>
 
           <nav
-            class="gap-8 align m-0 pb-4 sm:pb-0 hidden md:flex"
+            class="gap-8 align m-0 pb-4 sm:pb-0 hidden lg:flex"
             aria-label={`main`}
           >
             <Link
@@ -73,11 +73,11 @@ export default component$(() => {
       </div>
       <section
         id="mobile-menu"
-        className="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-white text-3xl z-10"
+        class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-white text-3xl z-10"
       >
         <button class="text-5xl self-end px-6">&times;</button>
         <nav
-          className="flex min-h-screen flex-col items-center py-8"
+          class="flex min-h-screen flex-col items-center py-8"
           aria-label="mobile"
         >
           <Link

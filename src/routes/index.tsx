@@ -9,7 +9,7 @@ export default component$(() => {
     <>
       <section class="bg-brown text-white">
         <div class="container m-auto flex justify-center items-center flex-col md:flex-row items-center gap-8 py-16">
-          <div className="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full max-w-[300px] mx-auto p-1">
+          <div class="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full max-w-[300px] mx-auto p-1">
             <Image
               alt={`Profile picture of Bryan Hannes`}
               sizes={`100vw`}

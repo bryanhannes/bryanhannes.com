@@ -23,9 +23,9 @@ export default component$(() => {
               daily work horse, but I like exploring other technologies as well.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-8">
-              <div className="flex flex-col">
-                <p className={`mb-4`}>
+            <div class="flex flex-col sm:flex-row gap-8">
+              <div class="flex flex-col">
+                <p class={`mb-4`}>
                   I am a software engineer with extensive experience in building
                   high-quality applications. My journey in the field began as a
                   Java developer, but I soon discovered my passion for the
@@ -34,28 +34,28 @@ export default component$(() => {
                   <span class={`text-orange`}>Angular</span>.
                 </p>
 
-                <p className={`mb-4`}>
+                <p class={`mb-4`}>
                   Throughout my career, I have had the opportunity to work with
                   a diverse range of technologies. From setting up design
                   systems in Figma, to creating Dockerfiles, to building NodeJS
                   applications.
                 </p>
               </div>
-              <div className="flex flex-col">
-                <p className={`mb-4`}>
+              <div class="flex flex-col">
+                <p class={`mb-4`}>
                   Even though, I have worked with a wide variety of
-                  technologies, my main{" "}
-                  <span className={`text-orange`}>focus</span> still lies in{" "}
-                  <span className={`text-orange`}>frontend development</span>.
+                  technologies, my main <span class={`text-orange`}>focus</span>{" "}
+                  still lies in{" "}
+                  <span class={`text-orange`}>frontend development</span>.
                 </p>
 
-                <p className={`mb-4`}>
+                <p class={`mb-4`}>
                   In addition to my professional experience, I have also
                   undertaken numerous{" "}
-                  <span className={`text-orange`}>side projects</span> that have
+                  <span class={`text-orange`}>side projects</span> that have
                   helped me continually improve and refine my skills. I firmly
                   believe that these projects have been invaluable in my{" "}
-                  <span className={`text-orange`}>
+                  <span class={`text-orange`}>
                     growth as a software engineer
                   </span>
                   .
@@ -68,7 +68,7 @@ export default component$(() => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full max-w-[300px] mx-auto p-1">
+          <div class="bg-gradient-to-r from-red-500 to-yellow-500  bg-white rounded-full max-w-[300px] mx-auto p-1">
             <Image
               alt={`Profile picture of Bryan Hannes`}
               sizes={`100vw`}
@@ -81,36 +81,36 @@ export default component$(() => {
         </div>
       </section>
 
-      <section className="bg-white py-8">
-        <div className="container m-auto my-10">
-          <h2 className={`text-2xl mb-3 text-center`}>My toolbelt</h2>
-          <hr className="mb-8 w-20 border-orange border-2 border-solid text-center mx-auto" />
-          <div className={`flex flex-row flex-wrap justify-center gap-16 mt-4`}>
+      <section class="bg-white py-8">
+        <div class="container m-auto my-10">
+          <h2 class={`text-2xl mb-3 text-center`}>My toolbelt</h2>
+          <hr class="mb-8 w-20 border-orange border-2 border-solid text-center mx-auto" />
+          <div class={`flex flex-row flex-wrap justify-center gap-16 mt-4`}>
             <img
               src="/assets/images/logos/angular.svg"
               alt="Angular"
-              className="skill-logo"
+              class="skill-logo"
             />
             <img
               src="/assets/images/logos/rxjs.png"
               alt="RxJS"
-              className="skill-logo"
+              class="skill-logo"
             />
             <img
               src="/assets/images/logos/nx.svg"
               alt="Nx Devtools"
-              className="skill-logo"
+              class="skill-logo"
             />
             <QwikLogo />
             <img
               src="/assets/images/logos/nodejs.png"
               alt="NodeJS"
-              className="skill-logo"
+              class="skill-logo"
             />
             <img
               src="/assets/images/logos/docker.webp"
               alt="Docker"
-              className="skill-logo"
+              class="skill-logo"
             />
           </div>
         </div>

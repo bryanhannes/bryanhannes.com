@@ -29,7 +29,7 @@ export const Card = component$(
             <img
               src={imagePath}
               alt={title}
-              className="rounded-t-xl"
+              class="rounded-t-xl"
               loading="lazy"
             />
           ) : (
