@@ -22,7 +22,7 @@ export default component$(() => {
 
           <div class="flex flex-col gap-2">
             <div class="flex flex-col sm:flex-row gap-4 mb-2 text-center sm:text-left">
-              <span class={`waving-hand text-4xl md:text-5xl lg:text-6xl`}>
+              <span class={`waving-hand text-4xl md:text-5xl lg:text-6xl z-0`}>
                 👋
               </span>
               <h1 class={`text-3xl md:text-4xl lg:text-5xl`}>
