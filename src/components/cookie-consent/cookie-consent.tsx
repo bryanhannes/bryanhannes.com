@@ -5,6 +5,7 @@ import {
   cookieConsentRejected,
   showCookiebanner,
 } from "./cookie-consent-logic";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const state = useStore<{ showCookiebanner: boolean | null }>({
@@ -32,8 +33,13 @@ export default component$(() => {
         <div class="w-full">
           This website uses cookies to keep track of your cookie preferences and
           to analyze our Internet traffic. We do not share this information with
-          third parties.
-          {/* <a href="#" class="decoration-orange-600 whitespace-nowrap  hover:underline">Learn more</a> */}
+          third parties.{" "}
+          <Link
+            href="/privacy-policy"
+            class="whitespace-nowrap text-orange hover:underline"
+          >
+            Learn more
+          </Link>
         </div>
         <div class="flex gap-4 items-center flex-shrink-0">
           <button
