@@ -4,7 +4,7 @@ import { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <>
-      <div className="container mx-auto leading-7 my-8">
+      <div class="container mx-auto leading-7 my-8">
         <h1 class={`text-3xl mb-4`}>Privacy Policy for bryanhannes.com</h1>
 
         <p>
