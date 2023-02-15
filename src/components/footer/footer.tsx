@@ -9,9 +9,11 @@ export default component$(() => {
   return (
     <footer class="bg-brown">
       <div class="container mx-auto">
-        <div class="flex justify-between py-5 gap-1">
-          <Socials />
-          <div class="text-white font-medium">
+        <div class="flex flex-col sm:flex-row justify-between py-5 gap-1">
+          <div class={`mb-4 sm:mb-0`}>
+            <Socials />
+          </div>
+          <div class="text-white font-medium text-center sm:text-left">
             &copy; 2022 - {state.year} Bryan Hannes
           </div>
         </div>
