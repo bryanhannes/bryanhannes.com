@@ -121,9 +121,9 @@ export default component$(() => {
           <h2 class={`text-2xl mb-2`}>Side projects</h2>
           <hr class="mb-4 w-20 border-orange border-2 border-solid" />
           <p class={`mb-8`}>
-            To maintain excitement and explore new technology, I enjoy
-            undertaking side projects. Here, I have listed some of my most
-            noteworthy side projects.
+            To maintain excitement and explore new technologies, I enjoy working
+            on side projects. Here, I have listed some of my most noteworthy
+            side projects.
           </p>
           <div class={`grid gap-8 grid-cols-1 sm:grid-cols-2`}>
             <Card
@@ -135,12 +135,47 @@ export default component$(() => {
             >
               <Image
                 q:slot={`image`}
-                alt={`Profile picture of Bryan Hannes`}
+                alt={`Frituurvleesje kiezen screen mockup`}
                 sizes={`(max-width: 400px) 400w, 720w`}
                 imgSrc={`/assets/images/projects/frituurvleesjekiezen@400.jpg`}
                 imgSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.jpg 400w, /assets/images/projects/frituurvleesjekiezen@720.jpg 720w`}
                 webpSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.webp 400w, /assets/images/projects/frituurvleesjekiezen@720.webp 720w`}
                 avifSrcSet={`/assets/images/projects/frituurvleesjekiezen@400.avif 400w, /assets/images/projects/frituurvleesjekiezen@720.avif 720w`}
+              />
+            </Card>
+            <Card
+              title={`AmelioratedChat`}
+              description={`AmelioratedChat is a better, open source UI for ChatGPT. This application is build with Angular and NX, it's build with lots of best practices and the source code is available on GitHub. `}
+              url={`https://www.amelioratedchat.com/`}
+              buttonText={`Check it out`}
+              target={"_blank"}
+            >
+              <Image
+                q:slot={`image`}
+                alt={`AmelioratedChat screen mockup`}
+                sizes={`(max-width: 400px) 400w, 720w`}
+                imgSrc={`/assets/images/projects/amelioratedchat@400.jpg`}
+                imgSrcSet={`/assets/images/projects/amelioratedchat@400.jpg 400w, /assets/images/projects/amelioratedchat@720.jpg 720w`}
+                webpSrcSet={`/assets/images/projects/amelioratedchat@400.webp 400w, /assets/images/projects/amelioratedchat@720.webp 720w`}
+                avifSrcSet={`/assets/images/projects/amelioratedchat@400.avif 400w, /assets/images/projects/amelioratedchat@720.avif 720w`}
+              />
+            </Card>
+
+            <Card
+              title={`QwikChat`}
+              description={`QwikChat is ChatGPT like chatbot that I build with Qwik. I used it to learn more about Qwik and OpenAI API. I also used this project in a YouTube video.`}
+              url={`https://github.com/bryanhannes/qwikchat`}
+              buttonText={`Check it out on Github`}
+              target={"_blank"}
+            >
+              <Image
+                q:slot={`image`}
+                alt={`QwikChat screen mockup`}
+                sizes={`(max-width: 400px) 400w, 720w`}
+                imgSrc={`/assets/images/projects/qwikchat@400.jpg`}
+                imgSrcSet={`/assets/images/projects/qwikchat@400.jpg 400w, /assets/images/projects/qwikchat@720.jpg 720w`}
+                webpSrcSet={`/assets/images/projects/qwikchat@400.webp 400w, /assets/images/projects/qwikchat@720.webp 720w`}
+                avifSrcSet={`/assets/images/projects/qwikchat@400.avif 400w, /assets/images/projects/qwikchat@720.avif 720w`}
               />
             </Card>
           </div>
