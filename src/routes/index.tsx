@@ -61,17 +61,16 @@ export default component$(() => {
           <Card
             title={"The ChatGPT lookalike build with Qwik and OpenAI"}
             url={
-              "https://blog.bryanhannes.com/the-chat-gpt-lookalike-build-with-qwik-and-openai/"
+              "https://blog.bryanhannes.com/transforming-data-with-rxjs-map/"
             }
-            buttonText={"Watch the video"}
           >
             <Image
               q:slot={`image`}
-              alt={`The ChatGPT lookalike build with Qwik and OpenAI`}
+              alt={`Transforming data with the RxJS Map operator`}
               sizes={`100vw`}
-              imgSrc={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.jpg`}
-              webpSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.webp 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.webp 1000w`}
-              avifSrcSet={`https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@500.avif 500w, https://blog.bryanhannes.com/assets/qwikchat-chat-gpt-with-qwik-and-openai/qwikchat-chat-gpt-with-qwik-and-openai@1000.avif 1000w`}
+              imgSrc={`https://blog.bryanhannes.com/assets/transforming-data-with-rxjs-map/transforming-data-with-rxjs-map@500.jpg`}
+              webpSrcSet={`https://blog.bryanhannes.com/assets/transforming-data-with-rxjs-map/transforming-data-with-rxjs-map@500.webp 500w, https://blog.bryanhannes.com/assets/transforming-data-with-rxjs-map/transforming-data-with-rxjs-map@1000.webp 1000w`}
+              avifSrcSet={`https://blog.bryanhannes.com/assets/transforming-data-with-rxjs-map/transforming-data-with-rxjs-map@500.avif 500w, https://blog.bryanhannes.com/assets/transforming-data-with-rxjs-map/transforming-data-with-rxjs-map@1000.avif 1000w`}
               cssClass={`rounded-t-xl`}
             />
           </Card>

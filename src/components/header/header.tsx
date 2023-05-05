@@ -1,8 +1,8 @@
-import { component$, useClientEffect$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
-  useClientEffect$(() => {
+  useVisibleTask$(() => {
     const hamburgerBtn = document.getElementById("hamburger-button");
     const mobileMenu = document.getElementById("mobile-menu");
 

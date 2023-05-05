@@ -1,4 +1,4 @@
-import { component$, useClientEffect$, useStore } from "@builder.io/qwik";
+import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
 
 import {
   cookieConsentGranted,
@@ -12,14 +12,9 @@ export default component$(() => {
     showCookiebanner: null,
   });
 
-  useClientEffect$(
-    () => {
-      state.showCookiebanner = showCookiebanner() || false;
-    },
-    {
-      eagerness: "idle", // 'load' | 'visible' | 'idle'
-    }
-  );
+  useVisibleTask$(() => {
+    state.showCookiebanner = showCookiebanner() || false;
+  });
 
   return (
     <>
