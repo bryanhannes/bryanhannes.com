@@ -12,7 +12,7 @@ export const RouterHead = component$(() => {
     <>
       <title>{head.title}</title>
 
-      <link rel="canonical" href={loc.href} />
+      <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link
         rel="apple-touch-icon"
@@ -47,7 +47,10 @@ export const RouterHead = component$(() => {
         <style {...s.props} dangerouslySetInnerHTML={s.style} />
       ))}
 
-      <script src="https://www.googletagmanager.com/gtag/js?id=G-M1S4NQB70S" async></script>
+      <script
+        src="https://www.googletagmanager.com/gtag/js?id=G-M1S4NQB70S"
+        async
+      ></script>
     </>
   );
 });
