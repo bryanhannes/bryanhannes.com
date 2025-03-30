@@ -89,11 +89,11 @@ const renderIcon = (iconType) => {
                         </div>
                     </div>
             ))}
-
-            {/* Clone first few items for seamless looping */}
-            {timelineItems.slice(0, 4).map((item) => (
+        </div>
+        <div class="timeline-scroll">
+            {timelineItems.map((item, index) => (
                     <div class="flex items-start gap-4 mb-6">
-                        <div class="w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center bg-gray-800">
+                        <div class={`w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center ${index === 0 ? 'bg-[#F04C26]' : 'bg-gray-800'}`}>
                             <Fragment set:html={renderIcon(item.icon)} />
                         </div>
 
@@ -128,7 +128,7 @@ const renderIcon = (iconType) => {
             transform: translateY(0);
         }
         100% {
-            transform: translateY(calc(-50%));
+            transform: translateY(calc(-100% - 1rem));
         }
     }
 </style>
