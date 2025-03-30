@@ -9,7 +9,7 @@ A personal website built with Astro, and Tailwind CSS. This project replicates t
 
 ## Getting Started
 
-### Prerequisites
+### Prerequisites 
 
 - Node.js (v18 or higher)
 - npm or yarn
