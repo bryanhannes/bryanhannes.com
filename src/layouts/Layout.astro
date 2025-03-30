@@ -1,0 +1,29 @@
+---
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Personal website of Bryan Hannes">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+<body class="bg-[#0f1119] text-white min-h-screen">
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <AnimatedBackground />
+    <slot />
+</div>
+</body>
+</html>

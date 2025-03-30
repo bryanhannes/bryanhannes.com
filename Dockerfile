@@ -1,37 +1,34 @@
-# Intermediate docker image to build the bundle in and install dependencies
-FROM node:19.2-alpine3.15 as build
+FROM node:18-alpine AS builder
 
-# Set the working directory to /usr/src/app
-WORKDIR /usr/src/app
+# Set working directory
+WORKDIR /app
 
-COPY ./package.json ./
-COPY ./package-lock.json ./
+# Copy package files
+COPY package.json package-lock.json* ./
 
-# Install the dependencies
+# Install dependencies
 RUN npm ci
 
-# Copy the source code into the build image
-COPY ./ ./
+# Copy source files
+COPY . .
 
-# Build the project
+# Build the Astro site
 RUN npm run build
 
-# Pull the same Node image and use it as the final (production image)
-FROM node:19.2-alpine3.15 as production
+# Use nginx to serve static files
+FROM nginx:alpine
 
-# Set the working directory to /usr/src/app
-WORKDIR /usr/src/app
+# Copy built static files to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Only copy the results from the build over to the final image
-# We do this to keep the final image as small as possible
-COPY --from=build /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/server ./server
-COPY --from=build /usr/src/app/dist ./dist
+# Copy custom nginx config if needed
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-ENV PORT=8080
-
-# Expose port 8080 (default port)
+# Expose port
 EXPOSE 8080
 
-# Start the application
-CMD [ "node", "server/entry.express"]
+# Update nginx config to listen on port 8080 (Cloud Run requires this)
+RUN sed -i.bak 's/listen\(.*\)80;/listen 8080;/' /etc/nginx/conf.d/default.conf
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]

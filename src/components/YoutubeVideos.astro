@@ -1,0 +1,67 @@
+---
+const videos = [
+    {
+        title: "Generating icon components from SVG files with NX and Angular",
+        link: 'https://blog.bryanhannes.com/svg-to-icon-components/',
+        thumbnail: "/images/videos/nx-angular-icons.webp",
+        date: "13 November 2024"
+    },
+    {
+        title: "Angular + NGINX + Docker",
+        thumbnail: "/images/videos/angular-nginx-docker.webp",
+        link: "https://blog.bryanhannes.com/angular-nginx-docker/",
+        date: "21 May 2023",
+        // badge: {
+        //     text: "+$10K",
+        //     bgColor: "bg-yellow-500",
+        //     textColor: "text-black"
+        // }
+    },
+    {
+        title: "Why you should externalize your Angular Configuration",
+        link: 'https://blog.bryanhannes.com/why-you-should-externalize-angular-configuration/',
+        thumbnail: "/images/videos/externalize-configuration-angular.webp",
+        date: "16 December 2022",
+        // badge: {
+        //     text: "Free",
+        //     bgColor: "bg-green-500",
+        //     textColor: "text-white"
+        // }
+    }
+];
+---
+
+<div class="mt-10 p-6 rounded-xl bg-[#0B0F1A]">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">Latest blog articles</h2>
+        <a href="https://blog.bryanhannes.com/" class="text-[#F04C26] text-sm flex items-center gap-1">
+            See all blog articles
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {videos.map((video, index) => (
+                <div class={`rounded-xl overflow-hidden bg-[#0B0F1A] hover:bg-[#1A1F2E] transition-colors ${index > 0 ? 'hidden md:block' : ''}`}>
+                    <a href={video.link} target="_blank">
+                    <div class="relative">
+                        <img src={video.thumbnail} alt={video.title} class="w-full h-48 object-cover" />
+                        {video.badge && (
+                                <div class="absolute bottom-2 right-2">
+              <span class={`${video.badge.bgColor} ${video.badge.textColor} text-xs font-medium py-1 px-2 rounded`}>
+                {video.badge.text}
+              </span>
+                                </div>
+                        )}
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium mb-2">{video.title}</h3>
+                        <span class="text-sm text-gray-400">{video.date}</span>
+                    </div>
+                    </a>
+                </div>
+        ))}
+    </div>
+</div>

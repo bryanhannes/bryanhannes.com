@@ -1,0 +1,134 @@
+---
+const timelineItems = [
+    {
+        icon: "building",
+        title: "3D Worx",
+        subtitle: "Joined 3D Worx as Cofounder",
+        date: "March 2025"
+    },
+    {
+        icon: "presentation",
+        title: "Workshop trainer NG-BE",
+        subtitle: "Large-scale Angular Enterprise Architecture - Simplified Courses",
+        date: "December 2024"
+    },
+    {
+        icon: "youtube",
+        title: "YouTube",
+        subtitle: "Launched YouTube channel",
+        date: "December 2022"
+    },
+    {
+        icon: "code",
+        title: "Zoli",
+        subtitle: "Started freelance career - Freelance Angular developer",
+        date: "Juni 2023"
+    },
+    {
+        icon: "presentation",
+        title: "Workshop trainer NG-BE",
+        subtitle: "Angular Proven Enterprise Solutions - Simplified Courses",
+        date: "March 2023"
+    },
+    {
+        icon: "design",
+        title: "Zoli",
+        subtitle: "Launched web- and graphic design company",
+        date: "Oct 2018"
+    }
+];
+
+// Function to render the appropriate icon based on the icon type
+const renderIcon = (iconType) => {
+    switch(iconType) {
+        case "building":
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>`;
+        case "presentation":
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>`;
+        case "youtube":
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>`;
+        case "code":
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>`;
+        case "design":
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>`;
+        default:
+            return `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>`;
+    }
+};
+---
+
+<div class="p-6 rounded-xl bg-[#0B0F1A] h-[300px] flex flex-col">
+    <h2 class="text-xl font-bold mb-6">Timeline</h2>
+
+    <div class="timeline-container">
+        <div class="timeline-scroll">
+            {timelineItems.map((item, index) => (
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class={`w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center ${index === 0 ? 'bg-[#F04C26]' : 'bg-gray-800'}`}>
+                            <Fragment set:html={renderIcon(item.icon)} />
+                        </div>
+
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold">{item.title}</h3>
+                                {item.date && <span class="text-sm text-gray-400">{item.date}</span>}
+                            </div>
+                            <p class="text-sm text-gray-400">{item.subtitle}</p>
+                        </div>
+                    </div>
+            ))}
+
+            {/* Clone first few items for seamless looping */}
+            {timelineItems.slice(0, 4).map((item) => (
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center bg-gray-800">
+                            <Fragment set:html={renderIcon(item.icon)} />
+                        </div>
+
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold">{item.title}</h3>
+                                {item.date && <span class="text-sm text-gray-400">{item.date}</span>}
+                            </div>
+                            <p class="text-sm text-gray-400">{item.subtitle}</p>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+<style>
+    .timeline-container {
+        height: calc(300px - 70px);
+        overflow: hidden;
+        position: relative;
+        mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    }
+
+    .timeline-scroll {
+        animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(calc(-50%));
+        }
+    }
+</style>

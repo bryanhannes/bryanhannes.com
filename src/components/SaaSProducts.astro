@@ -1,0 +1,46 @@
+---
+const products = [
+    {
+        id: "Frituurvleesjeskiezen",
+        name: "frituurvleesjekiezen.be",
+        description: "Frituurvleesjekiezen is a website that helps you choose a frituurvleesje. It's a fun project I build with Qwik.",
+        link: 'https://frituurvleesjekiezen.be/',
+        image: "/images/products/frituurvleesjekiezen.webp"
+    },
+    {
+        id: "nx-angular-icons",
+        name: "NX Angular Icons",
+        link: 'https://github.com/bryanhannes/nx-angular-icons',
+        image: "/images/products/nx-angular-icons.webp"
+    }
+];
+---
+
+<div class="p-6 rounded-xl bg-[#0B0F1A] h-full">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold">My Side Projects</h2>
+        <!--<a href="#" class="text-[#F04C26] text-sm flex items-center gap-1">-->
+        <!--    All Products-->
+        <!--    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+        <!--        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />-->
+        <!--    </svg>-->
+        <!--</a>-->
+    </div>
+
+    <div class="space-y-6">
+        {products.map(product => (
+                <div class="rounded-xl overflow-hidden bg-gray-900">
+                    <div class="relative">
+                        <a href={product.link} target="_blank">
+                        <img src={product.image} alt={product.name} class="w-full h-48 object-cover" />
+                        <div class="absolute bottom-2 left-2">
+                            <span class="bg-white text-black text-xs font-medium py-1 px-2 rounded">
+                              {product.name}
+                            </span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+        ))}
+    </div>
+</div>

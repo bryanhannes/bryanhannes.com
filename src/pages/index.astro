@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import Timeline from '../components/Timeline.astro';
+import FavoriteTools from '../components/FavoriteTools.astro';
+import SaaSProducts from '../components/SaaSProducts.astro';
+import YoutubeVideos from '../components/YoutubeVideos.astro';
+---
+
+<Layout title="Bryan Hannes">
+	<Header />
+
+	<main class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+		<!-- First column - Profile Card -->
+		<div class="lg:col-span-1 h-full">
+			<ProfileCard class="h-full" />
+		</div>
+
+		<!-- Second column - Timeline and Favorite Tools -->
+		<div class="lg:col-span-1 h-full flex flex-col">
+			<div class="flex-grow mb-6">
+				<Timeline />
+			</div>
+			<div class="flex-grow">
+				<FavoriteTools />
+			</div>
+		</div>
+
+		<!-- Third column - SaaS Products -->
+		<div class="lg:col-span-1 h-full">
+			<SaaSProducts class="h-full" />
+		</div>
+	</main>
+
+	<YoutubeVideos />
+</Layout>
