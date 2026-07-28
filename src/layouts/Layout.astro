@@ -1,24 +1,41 @@
 ---
 import AnimatedBackground from '../components/AnimatedBackground.astro';
+import type { Lang } from '../i18n/translations';
+
 interface Props {
     title: string;
+    description: string;
+    lang?: Lang;
 }
 
-const { title } = Astro.props;
+const { title, description, lang = 'nl' } = Astro.props;
+
+const site = 'https://bryanhannes.com';
+const url = lang === 'nl' ? `${site}/` : `${site}/en/`;
 
 import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Bryan Hannes | Freelance Frontend Engineer specializing in Angular and enterprise architecture. With over a decade of experience, Bryan combines his technical expertise with AI and automation to drive innovation as a startup founder.">
+    <meta name="description" content={description}>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="canonical" href={url} />
+    <link rel="alternate" hreflang="nl" href={`${site}/`} />
+    <link rel="alternate" hreflang="en" href={`${site}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${site}/`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={`${site}/images/profile.webp`} />
+    <meta property="og:locale" content={lang === 'nl' ? 'nl_BE' : 'en_US'} />
 </head>
 <body class="bg-[#0f1119] text-white min-h-screen">
 <div class="max-w-7xl mx-auto px-4 py-8">
